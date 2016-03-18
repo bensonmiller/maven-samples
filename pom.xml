@@ -19,4 +19,28 @@
     <maven>3.0.3</maven>
   </prerequisites>
 
+  <profiles>
+    <profile>
+      <id>env-gxipd</id>
+      <activation>
+        <property>
+          <name>environment</name>
+          <value>gxipd</value>
+        </property>
+      </activation>
+      <distributionManagement>
+       <repository>
+         <id>releases</id>
+         <name>L11 PartnerDEV Nexus Repository - RELEASES</name>
+         <url>http://trident-nexus:8081/content/repositories/releases</url>
+       </repository>
+       <snapshotRepository>
+         <id>snapshots</id>
+         <name>L11 PartnerDEV Nexus Repository - SNAPSHOTS</name>
+         <url>http://trident-nexus:8081/content/repositories/snapshots</url>
+       </snapshotRepository>
+     </distributionManagement>
+    </profile>
+  </profiles>
+
 </project>
